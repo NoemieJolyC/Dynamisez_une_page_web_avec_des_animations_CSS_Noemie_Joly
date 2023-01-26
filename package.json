@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+    "sass":  "sass --watch ./sass/style.scss:./css/style.css  ./sass/menu.scss:./css/menu.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed"
   },
   "repository": {
     "type": "git",
@@ -12,8 +13,5 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NoemieJolyC/Projet-3/issues"
-  },
-  "homepage": "https://github.com/NoemieJolyC/Projet-3#readme"
+  "browserslist": "last 4 versions"
 }
