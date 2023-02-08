@@ -153,22 +153,9 @@ a:visited {
 }
 
 .menu__carte_entrees .card {
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-@-webkit-keyframes appear {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
 }
 @keyframes appear {
   from {
@@ -182,12 +169,9 @@ a:visited {
 }
 
 .menu__carte_plats .card {
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
 }
 @keyframes appear {
   from {
@@ -200,17 +184,13 @@ a:visited {
   }
 }
 .menu__carte_plats .card {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  animation-delay: 500ms;
 }
 
 .menu__carte_desserts .card {
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
 }
 @keyframes appear {
   from {
@@ -223,15 +203,13 @@ a:visited {
   }
 }
 .menu__carte_desserts .card {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .card {
   background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 1rem;

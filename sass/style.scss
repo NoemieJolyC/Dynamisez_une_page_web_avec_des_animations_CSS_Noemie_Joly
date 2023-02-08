@@ -8,6 +8,12 @@
 @import "btn/_btn.scss";
 @import "heart/_heart.scss";
 
+.test{
+  color: red;
+  &:hover {
+    color: aqua;
+  }
+}
 
 // border box and font designation
 * {
@@ -22,9 +28,10 @@ body {
   background-color: $hardbg;
 }
 .bg {
-  background: $bg;
+  background: $bg; //variable couleur du background//
 }
 
+//propriétés pour les liens//
 a {
   color: black;
   text-decoration: none;
@@ -33,14 +40,14 @@ a {
   }
 }
 
-// first section under header : location Paris
+// 1ere section sous le header : location Paris
 .section_location {
   padding: 0 5vw;
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
 }
-// 2nd section ohmyfood presentation with big button
+// 2eme section présentation avec le gros bouton
 .section_presentation {
   overflow: hidden;
   padding: 0 $main_margin;
@@ -48,16 +55,17 @@ a {
   flex-flow: wrap column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(white, #eaeaea);
-  & h2 {
+  background: linear-gradient(white, #eaeaea); //fonction qui crée un dégradé de gris pour le background //
+  &__h2 {
     align-self: center;
   }
-  &__h3 {
+  &__h4 {
     font-weight: lighter;
+    margin-top: 0%;
   }
 }
 
-// 3rd section, steps with 3 btns
+// 3eme section avec les 3 boutons
 .section_steps {
   padding: 0 $main_margin 5vw $main_margin;
   &__btn {

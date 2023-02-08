@@ -2,7 +2,7 @@
 .header {
     display: flex;
     justify-content: center;
-    box-shadow: 0px 5px 5px $shadow;
+    box-shadow: 0px 5px 5px $shadow; //variable de la couleur de l'ombre du header//
     margin-bottom: 5px;
     & img {
       padding-bottom: 0px;

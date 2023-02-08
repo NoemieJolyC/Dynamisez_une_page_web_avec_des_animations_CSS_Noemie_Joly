@@ -3,27 +3,12 @@
 header,
 main,
 footer {
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
-  -webkit-animation-duration: 2500ms;
-          animation-duration: 2500ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
-          animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
-}
-
-@-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: opacity;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
 
 @keyframes opacity {
@@ -39,16 +24,11 @@ footer {
   height: 180px;
   border: 10px solid #cccccc;
   border-radius: 50%;
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-duration: 2.2s;
-          animation-duration: 2.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
-          animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: spin;
+  animation-duration: 2.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
+  animation-fill-mode: forwards;
   position: absolute;
   margin: auto auto;
   left: 0;
@@ -56,40 +36,6 @@ footer {
   top: 0;
   bottom: 0;
   box-shadow: 5px 10px #99e2d0, 60px -16px rgb(172, 171, 171);
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    border-top: 30px solid #9356dc;
-    opacity: 1;
-    box-shadow: 5px 40px #99e2d0, 60px -16px rgb(172, 171, 171);
-  }
-  50% {
-    transform: rotate(360deg);
-    border-top: 40px solid #ff79da;
-    opacity: 0.95;
-    box-shadow: 15px 10px #99e2d0, 20px -16px rgb(172, 171, 171);
-    border-radius: 50%;
-  }
-  74% {
-    border-radius: 30%;
-  }
-  75% {
-    transform: rotate(540deg);
-    opacity: 0.9;
-    box-shadow: 5px 10px #99e2d0, -20px 16px rgb(172, 171, 171);
-  }
-  85% {
-    border-radius: 50%;
-  }
-  100% {
-    border-radius: 50%;
-    transform: rotate(720deg);
-    border-top: 50px solid #9356dc;
-    opacity: 0;
-    box-shadow: 25px 35px #99e2d0, 10px 26px rgb(172, 171, 171);
-  }
 }
 
 @keyframes spin {
@@ -197,6 +143,13 @@ footer {
   background-clip: text;
 }
 
+.test {
+  color: red;
+}
+.test:hover {
+  color: aqua;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -237,11 +190,12 @@ a:visited {
   text-align: center;
   background: linear-gradient(white, #eaeaea);
 }
-.section_presentation h2 {
+.section_presentation__h2 {
   align-self: center;
 }
-.section_presentation__h3 {
+.section_presentation__h4 {
   font-weight: lighter;
+  margin-top: 0%;
 }
 
 .section_steps {
@@ -311,7 +265,6 @@ a:visited {
 }
 
 .card {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   flex: 100%;
