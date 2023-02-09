@@ -7,7 +7,7 @@
 @import "btn/_btn.scss"; // pour le bouton
 @import "heart/_heart.scss"; // pour le coeur
 
-// backgrounds for the desktop, wrapper and fonts
+
 body {
   background-color: $hardbg; // pour le desktop
   margin: 0px;
@@ -26,7 +26,7 @@ a {
     color: black;
   }
 }
-// arrow header
+// flèche header
 .fa-arrow-left {
   position: relative;
   top: 20px;
@@ -34,7 +34,7 @@ a {
   font-size: x-large;
 }
 
-// top of the page under header // first image, 2nd title et font awesome icon
+// Haut de page sous le Header : image, 2eme titre et font awesome icon
 .restaurant {
   & img {
     height: 250px;
@@ -61,6 +61,7 @@ a {
   & h3 {
     padding-bottom: 0px;
     margin: 0 $main_margin;
+    font-weight: lighter;
   }
   & h4,
   & p {
@@ -71,7 +72,7 @@ a {
     margin-top: 0px;
     font-size: larger;
     // pour mettre trois points de suspension si c'est nécéssaire : 3 lignes CSS
-    white-space: nowrap; /* interdiction de passer à la ligne */
+    white-space: nowrap; 
     text-overflow: ellipsis;
     overflow: hidden;
   }
@@ -108,7 +109,7 @@ a {
   }
 }
 
-// ine the menu section : .card
+// cards des menus
 .card {
   @include cardppty;
   margin: 1rem;
@@ -122,7 +123,7 @@ a {
   &__text {
     display: flex;
     flex: 100%;
-    white-space: nowrap; /* interdiction de passer à la ligne */
+    white-space: nowrap; 
     flex-direction: column;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -135,17 +136,18 @@ a {
       & p {
         margin-top: 2px;
         overflow: hidden;
-        white-space: nowrap; /* interdiction de passer à la ligne */
+        white-space: nowrap; 
       }
       &__ingredients {
         text-overflow: ellipsis;
+        font-weight: lighter;
       }
       &__price {
         font-weight: bold;
       }
     }
   }
-  // check animation in .card
+  // check animation dans .card
   &__check {
     flex: 0%;
     color: $bg;
@@ -154,9 +156,9 @@ a {
     font-size: xx-large;
     text-align: center;
     // centrer verticalement sur une ligne:
-    height: 2.1em; /* hauteur du parent */
-    line-height: 2.1em; /* hauteur de ligne (identique) */
-    white-space: nowrap; /* interdiction de passer à la ligne */
+    height: 2.1em; 
+    line-height: 2.1em; 
+    white-space: nowrap; 
     border-top-right-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px;
     transform: translateX(100px);
@@ -188,11 +190,10 @@ a {
   margin: 2rem;
 }
 
-// Media queries for these menu pages
+// Media queries pour les pages menu
 @media screen and (min-width: $breakp1) {
   .menu {
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     & h3 {
@@ -208,8 +209,7 @@ a {
   }
   .card {
     max-width: 310px;
-
-    &__text {
+     &__text {
       padding: 0px;
     }
     &__check {

@@ -8,18 +8,11 @@
 @import "btn/_btn.scss";
 @import "heart/_heart.scss";
 
-.test{
-  color: red;
-  &:hover {
-    color: aqua;
-  }
-}
-
-// border box and font designation
+// border box 
 * {
   box-sizing: border-box;
 }
-// opacity animation for loader
+// opacity animation pour le loader
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
@@ -66,7 +59,7 @@ a {
 }
 
 // 3eme section avec les 3 boutons
-.section_steps {
+.section_fonctionnement {
   padding: 0 $main_margin 5vw $main_margin;
   &__btn {
     display: flex;
@@ -78,11 +71,21 @@ a {
     border-radius: 20px 20px;
     text-align: center;
     // centrer verticalement sur une ligne:
-    height: 4rem; /* hauteur du parent */
-    line-height: 2rem; /* hauteur de ligne (identique) */
-    white-space: nowrap; /* interdiction de passer à la ligne */
+    height: 4rem; 
+    line-height: 2rem; 
+    white-space: nowrap; 
+      .color_icon{
+        color: $darkshadow;       
+      }
+    &:hover{
+      background-color: lighten($primary, 35%);
+      cursor: pointer;
+      .color_icon {
+        color: $primary;
+      }
+    }
 
-    &__ordered {
+    &__commander {
       border-radius: 50%;
       background-color: $primary;
       color: white;
@@ -96,13 +99,9 @@ a {
     }
   }
 }
-.primary_bg {
-  background-color: lighten($primary, 35%);
-}
-.fa-store {
-  color: $primary;
-}
-// media query for desktop for the last two sections
+
+
+// media query pour desktop pour les sections présentation et fonctionnement//
 @media screen and (min-width: $breakp1) {
   .sectionflex {
     display: flex;
@@ -118,17 +117,17 @@ a {
       align-self: start;
     }
   }
-  .section_steps {
+  .section_fonctionnement {
     width: 50%;
     background: linear-gradient(white, #eaeaea);
   }
 }
-// biggest section : restaurants
+
+// section restaurants
 .section_restaurants {
   padding: 0 $main_margin;
   background-color: $bg;
   align-items: center;
-  //align title because of the justify content
   &__title {
     align-self: start;
   }
@@ -142,7 +141,6 @@ a {
   @include cardppty;
   overflow: hidden;
   width: 90vw;
-  padding: f0px;
   &__img {
     position: relative;
     width: 90vw;
@@ -154,7 +152,7 @@ a {
       border-top-left-radius: 20px 20px;
       border-top-right-radius: 20px 20px;
     }
-    &__new {
+    &__nouveau {
       font-weight: bold;
       z-index: 1;
       background-color: $tertiary;
@@ -165,14 +163,14 @@ a {
       right: 1em;
       top: 1em;
       position: absolute;
-      height: 2.5em; /* hauteur du parent */
-      line-height: 0.7em; /* hauteur de ligne (identique) */
-      white-space: nowrap; /* interdiction de passer à la ligne */
-      // transform: translate(-100px, 20px);
+      height: 2.5em; 
+      line-height: 0.7em; 
+      white-space: nowrap; 
+     
     }
   }
-  &__caption {
-    // description of restaurants
+  &__description {
+    // description des restaurants
     display: flex;
     justify-content: space-between;
     height: 65px;
@@ -197,7 +195,7 @@ a {
     }
   }
 }
-// medai query for restaurants
+// media query pour les restaurants
 @media screen and (min-width: $breakp1) {
   .section_restaurant__cards {
     display: flex;
